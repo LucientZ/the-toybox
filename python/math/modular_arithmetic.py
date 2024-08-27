@@ -19,7 +19,7 @@ def compute_gcd(a: int, b: int) -> int:
         return compute_gcd(min, max % min)
 
 
-def extended_euclidean(a: int, b: int) -> (int, int, int):
+def extended_euclidean(a: int, b: int) -> tuple[int, int, int]:
     """
     Recursive computation of gcd. This is an implementation of the extended euclidean algorithm.
 
