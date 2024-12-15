@@ -31,7 +31,14 @@ def convert_to_text(buffer: list[any], width: int, height: int, use_colors: bool
             char = " "
         else:
             char = rgb_to_ascii(r, g, b)
+
+        if use_colors:
+            ansi_code = rgb_to_ansi(r, g, b)
+            final_string += f"\033[38;5;{ansi_code}m"
+
         final_string += char
+
+
         if i % width == width - 1:
             final_string += '\n'
     return final_string
@@ -40,18 +47,19 @@ def convert_to_text(buffer: list[any], width: int, height: int, use_colors: bool
 def main():
     in_file = input("Enter Input File: ")
     out_file = input("Enter Output File: ")
+    use_color = input("Use color? (Y/n): ").lower() == "y"
 
     image = Image.open(in_file).convert("RGBA")
     width, height = image.size
     buffer: list[tuple[int, int, int]] = list(image.getdata())
 
 
-    final = convert_to_text(buffer, width, height, False)
+    final = convert_to_text(buffer, width, height, use_color)
 
     if out_file != "":
-        print(final, file=open("out_file", "w"))
+        print(final, file=open(out_file, "w"))
     else:
-        print(final)
+        print(final, end="\033[0m\n")
 
 
 if __name__ == "__main__":
