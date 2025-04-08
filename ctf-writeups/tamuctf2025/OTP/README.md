@@ -37,7 +37,7 @@ Now, look what happens when we xor the result with the key *or* the message
 |0     |1  |    1|
 |1     |0  |    1|
 
-We can extract either the key with the message or the message with the key. Meaning either if you xor a result with its key, you get back the message. This means if you have either, you win.
+We can extract either the key with the message or the message with the key. Meaning either if you xor a result with its key or you xor the result with the message, you get the other back. This means if you have either, you win.
 
 This binary has a coredump, meaning we can see what memory the program had at the moment of the dump. If we take a look at the otp function which obfuscates the original message, we can see clearly that it coredumps on the final call to the function:
 
