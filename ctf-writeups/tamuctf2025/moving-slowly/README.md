@@ -39,7 +39,7 @@ Quoth the webpage, 'gigem{m4yb3_n0t_everything_needs_ai}'
 
 ### The vuln in question
 
-Basically, this was supposed to be a timing attack with an AI, but the author forgot to check if `len(input_password) == len(correct_password)` and empty string was a valid solution lol
+Basically, this was supposed to be a timing attack with an AI, but the author forgot to check `if len(input_password) == len(correct_password)` and empty string was a valid solution lol
 
 ```py
 def compare_password(input_password):
