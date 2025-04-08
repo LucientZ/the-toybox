@@ -13,6 +13,7 @@ There's an included python file called `WDID.py`. I'll spare you the details, bu
 Keep in mind that this ctf has flags with the pattern "gigem{*}". There is a file included called `flag.wdz` which, if you look at it vaguely, you can see a pattern:
 
 ```
+*T:What's the flag? 
 A
 M:k
 YJ:1
