@@ -1,7 +1,7 @@
 # Moving Slowly
 
-Author: `moveslow`
-Original: https://github.com/tamuctf/tamuctf-2025/tree/main/web/moving-slowly
+- Author: `moveslow`
+- Original: https://github.com/tamuctf/tamuctf-2025/tree/main/web/moving-slowly
 
 ## Solution
 ```
