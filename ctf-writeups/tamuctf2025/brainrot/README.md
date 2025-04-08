@@ -209,7 +209,7 @@ If we do some debugging on this function, we can actively see what it does to ea
 [52671, 36375, 53156, 64990, 70519, 52186, 92344, 61595, 55193, 77115]
 ```
 
-So each "thought" is really just the character multiplied by some constant. Luckily, the original state of the neurons is given to us because `brain.rot()` works in the same way the flag was created. This means that `self.neurons[i][j]` is a known value for any i, j with `data[j]` being unknown. Hmm, interesting. We have 10 unknown values and 10 equations... What could that mean???
+So each "thought" is really just the sum of characters each multiplied by some constant. Luckily, the original state of the neurons is given to us because `brain.rot()` works in the same way the flag was created. This means that `self.neurons[i][j]` is a known value for any i, j with `data[j]` being unknown. Hmm, interesting. We have 10 unknown values and 10 equations... What could that mean???
 
 If you've taken an algebra class, you know the answer. ~~The Substitution Method!~~ We're doing this with linear algebra actually I don't have time for the substitution method. Our matrix would look something like this given the first set of neurons:
 
