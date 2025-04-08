@@ -32,7 +32,7 @@ Some esolangs play off of other languages and make them borderline undreadable. 
 
 ## Solution
 
-This challenge has a program in pygyatt. Don't worry if you can't read it, I'll fix it later. This is the code:
+This challenge has a program in pygyat. Don't worry if you can't read it, I'll fix it later. This is the code:
 
 ```py
 ###############
