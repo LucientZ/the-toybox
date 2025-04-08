@@ -1,2 +1,2 @@
 # the-toybox
-This is a collection of random code snippets that I find interesting
+This is a collection of things that I find interesting
